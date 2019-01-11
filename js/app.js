@@ -4,7 +4,7 @@ document.getElementById('loan-form').addEventListener('submit',function (e) {
     document.getElementById('results').style.display = 'none';
     //show result
     document.getElementById('loading').style.display = 'block';
-    setTimeout(calculateResults,2000)
+    setTimeout(calculateResults,2000);
     e.preventDefault();
 });
 
@@ -56,7 +56,7 @@ function showError(error){
 
     //get Element
     const card = document.querySelector('.card');
-    const heading =document.querySelector('.heading')
+    const heading =document.querySelector('.heading');
 
     //add class
     errorDiv.className = 'alert alert-danger';
@@ -68,7 +68,7 @@ function showError(error){
     card.insertBefore(errorDiv,heading);
 
     //clear Error after 3second
-    setTimeout(clearError,2000)
+    setTimeout(clearError,2000);
 }
 
 function clearError()
