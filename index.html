@@ -1,96 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <title>Loan Calculator</title>
-    <style>
-    #loading, #results {
-        display: none;
-    }
-    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <script src="main.js"></script>
+    
 </head>
-
-<body class="bg-dark">
-   <div class="container">
-       <div class="row">
-           <div class="col-md-6 mx-auto">
-            <div class="card card-body text-center mt-5">
-                <h1 class="heading display pb-3">Loan calculator</h1>
-                <form id="loan-form">
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">$</span> 
-                        </div>
-                        <input type="number" class="form-control" id="amount" placeholder="Loan amount">
-                    </div>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">%</span>
-                        </div>
-                        <input type="number" class="form-control" id="interest" placeholder="Interest">
-                    </div>
-                    <div class="form-group input-group">
-                        <input type="number" class="form-control" id="years" placeholder="Years To Repay">
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-block btn-dark" value="Calculate">
-                    </div>
-                </form>
-
-                <!--LOADER-->
-                
-                <div id="loading">
-                    <img src="img/loading.gif" alt="">
+<body>
+    <div class="container">
+        <header id="main-header">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-md-5">
+                    <img src="img/yash.jpg" alt="">
                 </div>
-                
-                <!--RESULT-->
-                <div id="results" class="pt-4">
-                    <h5>Results</h5>
-                    <div class="form-group input-group">
-                        <div class="input-group-append">
-                            <span class="input-group-text">Monthly Payment</span>
+                <div class="col-lg-8 col-md-7">
+                    <div class="d-flex flex-column">
+                        <div class="p-5 bg-dark text-white">
+                            <div class="d-flex flax-row justify-content-between align-items-center">
+                                <h1 class="display-4">Yash Prajapati</h1>
+                                <div class="d-none d-md-block">
+                                    <a href="http://twitter.com" class="text-white">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="http://facebook.com" class="text-white">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="http://instagram.com" class="text-white">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="http://github.com" class="text-white">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                           
                         </div>
-                        <input type="number" class="form-control" id="monthly-payment" disabled>
-                    </div> 
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Total Payment</span>
+                        <div class="p-4 bg-black">
+                            Learing Full Stack Devloper
                         </div>
-                        <input type="number" class="form-control" id="total-payment" disabled>
-                    </div>
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Total Interest</span>
+
+                        <div>
+                            <div class="d-flex flex-row text-ehite align-items-stretch text-center">
+                                <div class="port-item p-4 bg-primary" data-toggle="collapse" data-target="#home" style="  padding: 2.5em !important; ">
+                                    <i class="fas fa-home fa-2x d-block">
+                                    </i>
+                                    <span class="d-none d-sm-block">Home</span>
+                                </div>
+                                <div class="port-item p-4 bg-success" data-toggle="collapse" data-target="#resume" style="  padding: 2.5em !important; ">
+                                    <i class="fas fa-graduation-cap fa-2x d-block"></i>
+                                    <span class="d-none d-sm-block">Resume</span>
+                                </div>
+                                <div class="port-item p-4 bg-warning" data-toggle="collapse" data-target="#work" style="  padding: 2.5em !important; ">
+                                    <i class="fas fa-folder-open fa-2x d-block">
+                                    </i>
+                                    <span class="d-none d-sm-block">Work</span>
+                                </div>
+                                <div class="port-item p-4 bg-danger" data-toggle="collapse" data-target="#contact" style="  padding: 2.5em !important; ">
+                                    <i class="fas fa-home fa-2x d-block">
+                                    </i>
+                                    <span class="d-none d-sm-block">Contact</span>
+                                </div>
+                            </div>
                         </div>
-                        <input type="number" class="form-control" id="total-interest" disabled>
                     </div>
                 </div>
             </div>
-           </div>
-       </div>
-   </div>
+        </header>
 
-    <script src="js/app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    </div>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https3://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script>
-        //get  the current year for the copyright
-        $('#year').text(new Date().getFullYear());
-    </script>
+
 </body>
-
 </html>
