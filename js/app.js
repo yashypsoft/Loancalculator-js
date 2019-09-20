@@ -26,8 +26,20 @@ function calculateResults(){
     //complate monthly payment
     const x = Math.pow(1 + calculatedInterest,calculatedPayments);
     const monthly = (principal*x*calculatedInterest)/(x-1);
-
-    if(isFinite(monthly)){
+    
+    if(principal < 0)
+    {
+        showError('Please Enter Positive Amount for Principal');
+    }
+    else if(calculatedInterest < 0)
+    {
+        showError('Please Enter Positive Interest Rate');
+    }
+    else if(calculatedPayments  < 0)
+    {
+        showError('Please Enter Positive Value');
+    }
+    else if(isFinite(monthly)){
         UImonthlyPayment.value = monthly.toFixed(2);
         UItotalPayment.value = (monthly*calculatedPayments).toFixed(2);
         UItotalInterest.value = ((monthly * calculatedPayments)-principal).toFixed(2);
